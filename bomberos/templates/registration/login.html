@@ -1,8 +1,9 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% load static %}
+{% block titulo %} login {% endblock %}
 
-{% block content %}
+{% block Contenido %}
 <main class="form-signin w-100 m-auto">
   <form action="" method="post">
     {% csrf_token %}
