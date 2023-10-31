@@ -6,7 +6,7 @@ from django.contrib.staticfiles.urls import static
 from .views import exit
 urlpatterns = [
     path('', views.inicio, name='inicio'),
-    path('nosotros', views.nosotros, name='nosotros'),
+    path('contacto', views.contacto, name='contacto'),
     path('login', views.login, name='login'),
     path('logout/', exit, name='exit'),
     path('inventario', views.inventbomber, name='inventario'), 

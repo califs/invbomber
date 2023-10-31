@@ -22,8 +22,8 @@ def crear(request):
 def inicio(request):
     return render(request, 'paginas/index.html')
 
-def nosotros(request):
-    return render(request, 'paginas/nosotros.html')
+def contacto(request):
+    return render(request, 'paginas/contacto.html')
 
 @login_required
 def inventbomber(request):
