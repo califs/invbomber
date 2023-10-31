@@ -3,6 +3,9 @@ from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect
 from .models import Articulos
 from .forms import Articulosform
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+
 
 
 
@@ -22,6 +25,7 @@ def inicio(request):
 def nosotros(request):
     return render(request, 'paginas/nosotros.html')
 
+@login_required
 def inventbomber(request):
     return render(request, 'paginas/inventario.html')
 
@@ -40,7 +44,9 @@ def editar(request,id):
 def login(request):
     return render(request, 'registration/login.html')
 
-
+def exit(request):
+    logout(request)
+    return redirect('inicio')
 
 def eliminar(request, id):
     articulos = Articulos.objects.get(id=id)

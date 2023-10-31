@@ -3,10 +3,12 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import static
+from .views import exit
 urlpatterns = [
     path('', views.inicio, name='inicio'),
     path('nosotros', views.nosotros, name='nosotros'),
     path('login', views.login, name='login'),
+    path('logout/', exit, name='exit'),
     path('inventario', views.inventbomber, name='inventario'), 
     path('crear', views.crear, name='crear'), 
     path('listado', views.listado, name='listado'),
