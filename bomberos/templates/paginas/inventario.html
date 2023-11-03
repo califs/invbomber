@@ -5,40 +5,6 @@
 <style>
   body {
     background-color: rgb(172, 215, 222);
-    font-size: 24px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-  }
-  .btn-listado{
-    margin: 0 8cm;
-    background-color: #007BFF;
-    font-size: 30px;
-    font-weight: bold;
-    width: 200px; /* Changed from auto to 200px to match btn-listado */
-    height: 90px;
-    border-radius: 23px;
-    padding: 10 10%; /* Added padding to maintain some space around the text */
-    text-align: center; /* Added to justify the text inside the button */
-    transition: background-color 0.3s ease; /* Added transition for smooth color change */
-  }
-  .btn-listado:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
-  }
-
-  .btn-crear {
-    margin: 0 8cm;
-    background-color: #059749;
-    font-size: 30px;
-    font-weight: bold;
-    width: 200px; /* Changed from auto to 200px to match btn-listado */
-    height: 90px;
-    border-radius: 23px;
-    padding: 10 10%; /* Added padding to maintain some space around the text */
-    text-align: center; /* Added to justify the text inside the button */
-    transition: background-color 0.3s ease; /* Added transition for smooth color change */
-  }
-  .btn-crear:hover {
-    background-color: #037d32; /* Darker shade for hover effect */
   }
 </style>
 
@@ -46,13 +12,12 @@
     <img src="/static/images/inventario.jpg" alt="Inventario">
   </div>
 
-  <div style="text-align: center;">
-    <div role="group" aria-label="Basic example">
-      <a href="listado" class="btn btn-listado">Listar Inventario</a>
+  <div class="mb-3" style="text-align: center;">
+    <div class="mb-3" role="group" aria-label="Basic example">
+      <a href="listado" type="button" class="btn-listado btn btn btn-primary btn-lg">Listar Inventario</a>
+      <a href="crear" class="btn-crear btn btn-primary btn-lg">Crear Artículo</a>
     </div>
-    <div role="group" aria-label="Basic example">
-      <a href="crear" class="btn btn-crear">Crear Artículo</a>
-    </div>
+  </div>
   </div>
 
 
